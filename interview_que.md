@@ -43,6 +43,31 @@ By bridging the public and private worlds with a layer of proprietary software, 
 4. community cloud
 It allows systems and services to be accessible by a group of organizations. It is a distributed system that is created by integrating the services of different clouds to address the specific needs of a community, industry, or business. The infrastructure of the community could be shared between the organization which has shared concerns or tasks. It is generally managed by a third party or by the combination of one or more organizations in the community. 
 
+Types of cloud computing 
+There are three types of cloud computing
+1. Iaas (infrastructure as service)
+2. Paas (platform as service)
+3. Saas (software as service)
+
+1. Iaas (infrastructure as service)
+Infrastructure as a Service (IaaS) contains the most basic building blocks for Cloud infrastructure and offers services on tops of it such as renting IT infrastructure (virtual or physical) and networking features.
+IaaS mainly includes Cloud-based services on a pay-as-you-go model. A user pays for computing services on IaaS because it is the fundamental platform to build new technologies.
+Infrastructure as service contains things as networking, storage, servers, virtualization are managed by cloud providers
+and other things need to manage by our own. ex. ec2
+
+2. Paas (Platform as service)
+Platform-as-a-service (PaaS) refers to the supply of on-demand tools for developing, testing, delivering, and managing software applications.
+PaaS delivers a framework for developers and IT architects to create web or mobile apps that are scalable, without worrying about setting up or managing the underlying infrastructure of servers, storage, network, and databases needed for development. ex. rds
+
+3. Saas (Software as service)
+Software-as-a-service (SaaS) is a method for delivering on-demand software applications through Cloud on a subscription basis. A CSP takes care of managing the Cloud infrastructure and offers SaaS applications over the internet to a user that are accessible through a web browser. These applications are also available on multiple devices which can be accessed from anywhere. ex. gmail elastic beanstalk
+
+
+
+
+
+
+
 
  
   
