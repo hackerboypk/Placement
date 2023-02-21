@@ -23,3 +23,26 @@ such as computing power, storage, and databases, on an as-needed basis from a cl
 12.	These services are used in large companies.	                  These services are used in small and mid sized companies.
 13.	Implementation time is more.	                                Implementation time is less.
 
+Deployment Model of cloud
+Different types of cloud computing deployment models are:
+
+    Public cloud 
+    Private cloud
+    Hybrid cloud
+    Community cloud
+    Multi-cloud 
+  1. Public cloud
+ The public cloud makes it possible for anybody to access systems and services. 
+ The public cloud may be less secure as it is open to everyone.
+ The public cloud is one in which cloud infrastructure services are provided over the internet to the general people or major industry groups.
+ This form of cloud computing is an excellent example of cloud hosting, in which service providers supply services to a variety of customers. In this arrangement, storage backup and retrieval services are given for free, as a subscription, or on a per-user basis. ex. gmail google app engine
+ 2. Private cloud
+The private cloud deployment model is the exact opposite of the public cloud deployment model. It’s a one-on-one environment for a single user (customer). There is no need to share your hardware with anyone else. The distinction between private and public clouds is in how you handle all of the hardware. It is also called the “internal cloud” & it refers to the ability to access systems and services within a given border or organization. 
+3. hybrid cloud
+By bridging the public and private worlds with a layer of proprietary software, hybrid cloud computing gives the best of both worlds. With a hybrid solution, you may host the app in a safe environment while taking advantage of the public cloud’s cost savings. Organizations can move data and applications between different clouds using a combination of two or more cloud deployment methods, depending on their needs. 
+4. community cloud
+It allows systems and services to be accessible by a group of organizations. It is a distributed system that is created by integrating the services of different clouds to address the specific needs of a community, industry, or business. The infrastructure of the community could be shared between the organization which has shared concerns or tasks. It is generally managed by a third party or by the combination of one or more organizations in the community. 
+
+
+ 
+  
