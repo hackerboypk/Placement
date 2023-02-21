@@ -45,9 +45,9 @@ It allows systems and services to be accessible by a group of organizations. It 
 
 Types of cloud computing 
 There are three types of cloud computing
-1. Iaas (infrastructure as service)
-2. Paas (platform as service)
-3. Saas (software as service)
+ Iaas (infrastructure as service)
+ Paas (platform as service)
+ Saas (software as service)
 
 1. Iaas (infrastructure as service)
 Infrastructure as a Service (IaaS) contains the most basic building blocks for Cloud infrastructure and offers services on tops of it such as renting IT infrastructure (virtual or physical) and networking features.
