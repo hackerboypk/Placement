@@ -236,6 +236,39 @@ EBS                                                           S3                
 -provide bootable type volume                        -highly avaliable in region
 -highly avaliable within az
 
+S3 lifecycle?
+->what:
+     -it is rules, to define actions on S3, to set duration on objects such as transitioning objects to another storage class, archiving them,
+       or deleting them after a specific period of time
+      #-we use s3 lifecycle rule for cost optimization of storage of objects by transitive the object from one storage class to another storage class after particular period of time,and gets deleted once it is no longer needed.
+->why: 
+    -we use lifecycle for Cost optimization
+->how:
+    -their are three category 
+      i)frequent access ii)infrequent access iii)archive
+    -these three category are catogorized  in total 7 storage classes:
+	Amazon S3 Standard: 
+	Amazon S3 Intelligent-Tiering: 
+	Amazon S3 Standard Infrequent Access (S3 Standard-IA): 
+	Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA): 
+	Amazon S3 Glacier Instant Retrival: 
+  Amazon S3 Glacier flexible Retrival: 
+	Amazon S3 Glacier Deep Archive
+
+->can take the option life Cycle. Rule, on the management section, of the bucket.
+
+->we have to  maintain transition like std. to std IA or 1 zone IA or glacier 
+in which we have to specify min. days of time 
+like to transit Std. to std IA it takes min. 30 days and glac. to Deep Glac. 
+it is about min. 90 days. 
+
+Object Lock
+When enabled, this object will be prevented from being deleted or overwritten until the hold is explicitly removed.
+Store objects using a write-once-read-many (WORM) model to help you prevent objects from being deleted or overwritten for a fixed amount of time or indefinitely. 
+
+Server-side encryption with Amazon S3 managed keys (SSE-S3)
+is the base level of encryption setting of new objects that are uploaded to an S3 bucket.
+You can configure your object encryption by using either server-side encryption with Amazon S3 managed keys (SSE-S3) (the default) or server-side encryption with AWS Key Management Service (AWS KMS) keys (SSE-KMS)
 
 
 
