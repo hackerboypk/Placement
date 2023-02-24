@@ -62,6 +62,53 @@ PaaS delivers a framework for developers and IT architects to create web or mobi
 3. Saas (Software as service)
 Software-as-a-service (SaaS) is a method for delivering on-demand software applications through Cloud on a subscription basis. A CSP takes care of managing the Cloud infrastructure and offers SaaS applications over the internet to a user that are accessible through a web browser. These applications are also available on multiple devices which can be accessed from anywhere. ex. gmail elastic beanstalk
 
+IAM (Identity and Access Management)
+What is AWS IAM? 
+
+The Amazon Web Services Identity and Access Management service is like a security guard at the door to Amazon Web Services. 
+This is where Aws Services and its environment are authenticated and authorized. 
+The basic building blocks of AWS IAM are IAM roles, IAM users, groups and policies. 
+
+Iam user:
+IAM users can be people or applications that interact with the AWS environment services and its resources.
+An IAM user is an identity created in AWS to access various AWS resources and services.
+A user has permissions associated with it.
+The permissions define which actions that user can perform on a specific resource. 
+Iam groups:
+IAM groups are collections of IAM users.
+Users are organized into groups so you can assign permissions in bulk rather than individually for each user.
+In addition, permissions are automatically inherited, making it easier to control how resources are accessed within your account.
+iam policies:
+IAM Policies are how you determine who has access to what resources in your account.
+For example, you could allow users access to all Amazon EC2 instances within your AWS account, or just a specified instance.
+Types of iam policies:
+Identity-based policies: 
+This is the policy that binds with AWS identities, such as a users, group, or role.
+IAM policies are an example of that. These policies can be either Amazon Web Services managed or customer-managed.  
+Resource-based policies:
+AWS resource-based policies are the ones that can be tied directly to Amazon Resources like a bucket policy (S3).
+Resource-based policies are only available for certain services. 
+inline policy:
+An inline policy is a policy that's embedded in an IAM identity (a user, group, or role). 
+That is, the policy is an inherent part of the identity. 
+if the user gets deleted the policy will also deleted.
+roles:
+An IAM role is a temporary way to access permissions through your identity. 
+instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it.
+Also, a role does not have standard long-term credentials such as a password or access keys associated with it.
+Instead, when you assume a role, it provides you with temporary security credentials for your role session.
+
+uses of roles?]
+-roles are the secured way to grant permission to entity that we trust.                                             
+-it is an IAM identity which we can create in our account that have specific permission
+-an IAm role is similar to IAm user.
+-roles is an identity with permission policies that determine what the identity can and cannot do in aws.
+-however insted of being uniquely associated with one person ,a role is intended to be assumeable by anyone who  needs it.
+-it doesnt have standard long-term creadiantials such as password and access key asssociated with it.
+-insted when we assume a role ,it provides us with temporary security creadiantials for our role session.
+
+
+
 
 
 
