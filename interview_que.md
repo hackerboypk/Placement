@@ -74,24 +74,30 @@ IAM users can be people or applications that interact with the AWS environment s
 An IAM user is an identity created in AWS to access various AWS resources and services.
 A user has permissions associated with it.
 The permissions define which actions that user can perform on a specific resource. 
+
 Iam groups:
 IAM groups are collections of IAM users.
 Users are organized into groups so you can assign permissions in bulk rather than individually for each user.
 In addition, permissions are automatically inherited, making it easier to control how resources are accessed within your account.
+
 iam policies:
 IAM Policies are how you determine who has access to what resources in your account.
 For example, you could allow users access to all Amazon EC2 instances within your AWS account, or just a specified instance.
+
 Types of iam policies:
 Identity-based policies: 
 This is the policy that binds with AWS identities, such as a users, group, or role.
 IAM policies are an example of that. These policies can be either Amazon Web Services managed or customer-managed.  
+
 Resource-based policies:
 AWS resource-based policies are the ones that can be tied directly to Amazon Resources like a bucket policy (S3).
 Resource-based policies are only available for certain services. 
+
 inline policy:
 An inline policy is a policy that's embedded in an IAM identity (a user, group, or role). 
 That is, the policy is an inherent part of the identity. 
 if the user gets deleted the policy will also deleted.
+
 roles:
 An IAM role is a temporary way to access permissions through your identity. 
 instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it.
@@ -135,6 +141,7 @@ key features of AWS IAM?
     Multi-factor authentication (MFA) 
     Federated access 
     Analytics 
+    
 real time use of identity providers?
 -with help of identity provider we can manage our user identities outside of aws and give these user identies permission to use aws resources in your account.
 -IDP allow us to manage user identities outside of aws insted of creating IAM user in our aws account.
@@ -269,6 +276,8 @@ Store objects using a write-once-read-many (WORM) model to help you prevent obje
 Server-side encryption with Amazon S3 managed keys (SSE-S3)
 is the base level of encryption setting of new objects that are uploaded to an S3 bucket.
 You can configure your object encryption by using either server-side encryption with Amazon S3 managed keys (SSE-S3) (the default) or server-side encryption with AWS Key Management Service (AWS KMS) keys (SSE-KMS)
+
+============================================================================================
 
 
 
