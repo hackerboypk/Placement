@@ -164,6 +164,79 @@ User Configurations
     You have the option to specify an appropriate session time for the credentials in the Amazon S3 and Amazon Redshift connectors. AWS STS returns the temporary credentials with a default session time. The credentials expire after crossing the time limit. 
    
 ================================================================================================================
+S3 (simple Storage Service)
+What is AWS S3?
+Amazon S3 (Simple Storage Service) provides an object storage, which is designed for storing and recovering an arbitrary amount of information or data from anywhere over the internet.
+This storage is provided through a web services interface. It offers 99.999999999% durability and 99.99% availability of objects.
+It can also store computer files up to 5 terabytes in size.
+
+benefits of AWS Simple Storage Service?
+Durability: It gives 99.999999999 percent SLA.
+Cheaper: It supports a variety of storage classes. They range from those files that need to be accessed more frequently, like caching, to files that rarely change, like snapshots.
+Scalability: Storage resources can be easily scaled up or down based on your organization’s needs.
+Availability: The availability of objects on S3 is 99.99 percent
+Security: It offers a robust suite of tools for access management and encryption that provide enhanced security.
+Flexibility: The Simple Storage Service is perfect for a wide range of uses, including data storage, backups, software delivery, archiving, disaster recovery, hosting websites, mobile applications, IoT devices, and much more.
+
+S3 Versioning?
+The Amazon S3 Versioning feature allows you to keep multiple variants of the same object in the same bucket. 
+Objects stored in S3 buckets can be preserved, retrieved, and restored with Simple Storage Service Versioning.
+It is easy to recover from both unintentional user actions and application failures.
+
+What is Bucket Policy?
+Bucket policies allow you to grant access permissions to objects within your bucket by using AWS IAM policies.
+A bucket policy can only be associated with the bucket owner. 
+An owner of a bucket can assign permissions to any object in the bucket that is attached to the bucket.
+
+What is Access control lists (ACLs) ?
+The ACL allows you to grant read-only and write-only access to individual buckets and objects to authorized users.
+ACLs are attached to buckets and objects as sub-resources.
+ACLs are an older access control system for defining the which AWS accounts or groups are granted access and the type of access.
+
+How large can a Simple Storage Service bucket be?
+You can store an unlimited amount of data and objects in an Simple Storage Service bucket.
+The size of a single Amazon S3 object can range from 0 bytes to 5 terabytes.
+An object of around 5 GB can be uploaded in a single upload request but Multipart Upload must be enabled.
+
+benefits of S3 versioning.
+We can store multiple variants of an object in a bucket by versioning it.
+An object can be restored to a previous or specific version by versioning.
+If an object is deleted or accidentally overwritten, versioning can be used to recover it.
+
+How to configure S3 Versioning on a Bucket?
+
+Versioning helps you keep multiple versions of an object in one place. Follow these steps to enable versioning on an S3 bucket.
+
+    Login to your AWS account.
+    Choose Simple Storage Service service.
+    Choose a bucket for which versioning should be enabled.
+    Go to the properties tab.
+    Select versioning from properties.
+    Click on the OK button to enable versioning.
+
+diff type of storage in AWS?
+->S3 (SIMPLE STORAGE SERVICE)
+->EFS (Elastic file System)
+->EBS (Elastic block Storage)
+-> S3-Glacier
+->Storage Gateway
+->AWS Elastic Disaster Recovery
+->FSx
+->AWS Backup
+->Snowball (portable storage, use for data migration)
+
+EBS  vs S3 vs EFS
+
+EBS                                                           S3                                                                EFS
+-it is block storage ,data stored in unique blocks   -it is object storage store data in block format.           -it store data in file format
+-it must attached to EC2 instance                    -can access data by API calls which having protocols        -we can share file in n/w or can mount                                                                                                                          it to diffrent ec2
+-provide persisten storage                           -provide unlimited space                                    -we can use it as centralized storage also
+-Ex: Unix,ZFS,Ext4                                   -can store backup ,log-file and arcives                      -shared access to files
+-provide low latency                                 -have verion control system                                  -web serving
+-provide bootable type volume                        -highly avaliable in region
+-highly avaliable within az
+
+
 
 
 
