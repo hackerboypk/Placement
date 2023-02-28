@@ -300,15 +300,158 @@ Virtualization vs Cloud ?
 8.it is template based 					8. it is image based
 9. IAAS type						9. PAAS type
 
+What is hypervisor ?
+A hypervisor is computer software or hardware that enables you to host multiple virtual machines.
+it contains two types
+type1 called as bare metal hypervisor directly on h/w
+type2 called as hosted hypervisor it required os 
+
+what is ec2 ?
+Amazon Elastic Compute Cloud is  cloud-computing platform,  that allows users to rent virtual computers on which to run their own computer applications
+Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud.
+Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. 
+You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage.
+
+Features of Amazon EC2
+Amazon EC2 provides the following features:
+
+Virtual computing environments, known as instances
+
+Preconfigured templates for your instances, known as Amazon Machine Images (AMIs),
+
+Various configurations of CPU, memory, storage, and networking capacity for your instances, known as instance types
+
+Secure login information for your instances using key pairs (AWS stores the public key, and you store the private key in a secure place)
+
+Storage volumes for temporary data that's deleted when you stop, hibernate, or terminate your instance, known as instance store volumes
+
+Persistent storage volumes for your data using Amazon Elastic Block Store (Amazon EBS), known as Amazon EBS volumes
+
+Multiple physical locations for your resources, such as instances and Amazon EBS volumes, known as Regions and Availability Zones
+
+A firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances using security groups
+
+Static IPv4 addresses for dynamic cloud computing, known as Elastic IP addresses
+
+Metadata, known as tags, that you can create and assign to your Amazon EC2 resources
+
+Virtual networks you can create that are logically isolated from the rest of the AWS Cloud, and that you can optionally connect to your own network, known as virtual private clouds (VPCs)
+
+Create Ec2 instance
+steps 
+ec2>instance>launch instance>instance name>ami>instance type>key pair>network setting>configure storage>advanced details>launch instance
+
+Instance state
+1.pending
+The instance is preparing to enter the running state. An instance enters the pending state when it launches for the first time, or when it is started after being in the stopped state.
+2.running
+The instance is running and ready for use.
+3.stopping
+The instance is preparing to be stopped or stop-hibernated.
+4.stopped
+The instance is shut down and cannot be used. The instance can be started at any time.
+5.shutting-down
+The instance is preparing to be terminated.
+6.terminated
+The instance has been permanently deleted and cannot be started.
+
+Staus check
+0/2 h/w issue 
+1/2 s/w configuration issue
+2/2 all ok
+
+T2 
+Instance	vCPU*	CPU Credits    Mem (GiB)        Storage 	    Network Performance
+t2.nano		1	3		0.5		EBS-Only	  Low
+t2.micro	1	6		1		EBS-Only
+Low to Moderate
+t2.small	1	12		2		EBS-Only
+Low to Moderate
+t2.medium	2	24		4		EBS-Only
+Low to Moderate
+t2.large	2	36		8		EBS-Only	Low to Moderate
+t2.xlarge	4	54		16		EBS-Only	Moderate
+t2.2xlarge	8	81		32		EBS-Only	Moderate
+user cases
+Websites and web applications, development environments, build servers, code repositories, micro services, test and staging environments, and line of business applications.
+M series
+Instance Size	vCPU	Memory (GiB)	Instance Storage (GB)	Network Bandwidth (Gbps)***	EBS Bandwidth (Mbps)
+m6g.medium	1	4	EBS-Only	Up to 10	Up to 4,750
+m6g.large	2	8	EBS-Only	Up to 10	Up to 4,750
+m6g.xlarge	4	16	EBS-Only	Up to 10	Up to 4,750
+m6g.2xlarge	8	32	EBS-Only	Up to 10	Up to 4,750
+m6g.4xlarge	16	64	EBS-Only	Up to 10	4,750
+
+Use Cases
+
+Applications built on open-source software such as application servers, microservices, gaming servers, mid-size data stores, and caching fleets.
+
+Types of intance 
+1)Genral Purpose  <M , T> General purpose instances provide a balance of compute, memory and networking resources,
+2)computer optmized <C , H> Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors.
+3)memory optimized  <R , X> Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory.
+4)Storage optimized <I,D> Storage optimized instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage.
+5)Accelerated computing  Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
 
 
+Type of purchasing option 
+                                            
+1 On-Demand Instances – Pay, by the second, for the instances that you launch.
+2 Savings Plans – Reduce your Amazon EC2 costs by making a commitment to a consistent amount of usage, in USD per hour, for a term of 1 or 3 years.
+3 Reserved Instances – Reduce your Amazon EC2 costs by making a commitment to a consistent instance configuration, including instance type and Region, for a term of 1 or 3 years.
+4 Spot Instances – Request unused EC2 instances, which can reduce your Amazon EC2 costs significantly.
+5 Dedicated Hosts – Pay for a physical host that is fully dedicated to running your instances, and bring your existing per-socket, per-core, or per-VM software licenses to reduce costs.
+6 Dedicated Instances – Pay, by the hour, for instances that run on single-tenant hardware.
+7 Capacity Reservations – Reserve capacity for your EC2 instances in a specific Availability Zone for any duration.					    
 
+What is tenancy. ?
 
+Tenancy defines how EC2 instances are distributed across physical hardware and affects pricing. There are three tenancy options available:
+Shared (default) — Multiple AWS accounts may share the same physical hardware.
+Dedicated Instance (dedicated) — Your instance runs on single-tenant hardware.
+Dedicated Host (host) — Your instance runs on a physical server with EC2 instance capacity fully dedicated to your use, an isolated server with configurations that you can control.
 
+Launch Templet.?
+A launch template is similar to a launch configuration, in that it specifies instance configuration information.
+It includes the ID of the Amazon Machine Image (AMI), the instance type, a key pair, security groups, and other parameters used to launch EC2 instances.
 
+What is AMI
 
+An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance.
+You must specify an AMI when you launch an instance.
+You can launch multiple instances from a single AMI when you require multiple instances with the same configuration.
+You can use different AMIs to launch instances when you require instances with different configurations.
 
+Volume ?
+EBS
+An Amazon EBS volume is a durable, block-level storage device that you can attach to your instances.
+After you attach a volume to an instance, you can use it as you would use a physical hard drive.
+EBS volumes are flexible. 
+You can attach multiple EBS volumes to a single instance. 
+The volume and instance must be in the same Availability Zone. 
 
+Volume types ?
 
+Solid state drive (SSD) volumes
+SSD-backed volumes are optimized for transactional workloads involving frequent read/write operations with small I/O size, where the dominant performance attribute is IOPS. SSD-backed volume types include General Purpose SSD and Provisioned IOPS SSD .
+
+Hard disk drive (HDD) volumes
+HDD-backed volumes are optimized for large streaming workloads where the dominant performance attribute is throughput.
+HDD volume types include Throughput Optimized HDD and Cold HDD. 
+
+Previous generation volumes
+Previous generation volumes are hard disk drives that you can use for workloads with small datasets where data is accessed infrequently and performance is not of primary importance.
+
+what is security group ?
+A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. When you launch an instance, you can specify one or more security groups.
+
+placement group
+A cluster placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput.
+
+ Key pair. ?
+ A key pair is a combination of a public key that is used to encrypt data and a private key that is used to decrypt data. For more information about key pairs, see Amazon EC2 Key Pairs in the Amazon EC2 User Guide for Linux Instances. The AWS CloudFormation template for this tutorial, development-environment.
+
+network interface ?
+An elastic network interface is a logical networking component in a VPC that represents a virtual network card. It can include the following attributes: A primary private IPv4 address from the IPv4 address range of your VPC. One or more secondary private IPv4 addresses from the IPv4 address range of your VPC.
  
   
