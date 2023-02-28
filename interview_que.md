@@ -279,8 +279,26 @@ You can configure your object encryption by using either server-side encryption 
 
 ============================================================================================
 
+EC2 (elestic conpute cloud)
+What is Virtualization? 
+.Virtualization is technology that you can use to create virtual representations of servers, storage, networks, and other physical machines.
+.Virtualization is a process that allows a computer to share its hardware resources with multiple digitally separated environments.
+Each virtualized environment runs within its allocated resources, such as memory, processing power, and storage. 
+.virtulization is technology that allows us to create multiple simulated enviorment or dedicated  resources from a single ,physical hardware system.
+s/w called a hypervisor connects directly to that h/w and allow us to split 1 system into sepreate,distinct and  secure enviorment know as vm
 
+Virtualization vs Cloud ?
 
+	Cloud							Virtualization
+1.cloud is higly scalable				1.virtulization is low scalable
+2.it is flexible					2.it is less fexible
+3.in cc work load is stateless				3.in vz workoad is stateful.
+4.cost is higher than vz				4.cheaper than cc
+5.it require many dedicated h/w 			5. it require single dedicated h/w
+6.cc provides unnlimited space 				6.storage space depends on physical server capacity in vz
+7.cc is of two type :public and private			7.vz is of two type :hardware vz and application vz.
+8.it is template based 					8. it is image based
+9. IAAS type						9. PAAS type
 
 
 
