@@ -483,6 +483,107 @@ Presentation layer: formatting of data, encryption,decription, compression, deco
 Application layer: app, browser
 
 types of ip 
+===============================================================================================================================================================
+VPC
+
+what is vpc ?
+VPC stands for Virtual Private Cloud, which is a virtual network environment that allows you to provision and manage virtual private networks (VPNs) in the cloud. It provides a secure and isolated environment within a public cloud infrastructure, such as Amazon Web Services (AWS).
+
+diff between default vpc and custom vpc
+
+Default vpc										
+Every AWS account comes with a default VPC, which is preconfigured and ready to use. 
+The default VPC is designed to make it easy to get started with AWS by providing a VPC that has a set of default configurations
+The default VPC has a CIDR block of 172.31.0.0/16, which provides up to 65,536 private IP addresses.
+By default, all the subnets in the default VPC are configured to use the Internet Gateway (IGW) to provide internet access to the instances running in the VPC.
+
+Custom VPC: 
+A custom VPC is a VPC that you create and configure based on your specific requirements.
+When you create a custom VPC, you have complete control over the VPC's network configuration, including the IP address range, subnets, routing tables, security settings, and more.
+With a custom VPC, you can create multiple subnets, each with its own IP address range, and configure the network routing between the subnets.
+You can also configure network access control lists (ACLs) and security groups to control traffic to and from the instances running in the VPC.
+A custom VPC can be created and managed using the AWS Management Console, AWS CLI, or AWS SDKs.
+
+Features of vpc
+
+1. Isolation: VPCs provide logical isolation of resources, which means you can launch resources like EC2 instances, RDS databases, and ELBs in a private and secure network.
+2. Control: You have complete control over the IP address range, subnets, and routing tables for your VPC.
+3. Security: VPCs allow you to configure security groups, network ACLs, and other network security features to protect your resources from unauthorized access.
+4. Scalability: VPCs can be scaled easily by adding or removing subnets, changing routing tables, and launching new instances.
+5. Compatibility: VPCs are compatible with other AWS services like Direct Connect, VPN, and Elastic Load Balancing, which makes it easier to integrate your VPC with your existing infrastructure.
+6. Flexibility: VPCs allow you to customize your network topology, which means you can create a network that suits your specific needs.
+7. Cost-effectiveness: VPCs are charged on a pay-as-you-go basis, which means you only pay for the resources you use.
+
+Components of vpc
+A Virtual Private Cloud (VPC) is a virtual network infrastructure that provides a private, isolated environment for running your resources in the cloud. The components of a VPC typically include:
+1. Subnets: Subnets are network segments within a VPC that are used to organize resources and control network traffic. Each subnet is associated with a particular availability zone and can be configured with its own routing table and network access control list (ACL).
+2. Route Tables: Route tables are used to determine how network traffic is directed within the VPC. Each subnet is associated with a route table, which specifies the destination for traffic that originates from that subnet.
+3. Security Groups: Security groups are used to control access to resources within the VPC. They act as virtual firewalls, allowing or denying traffic based on defined rules.
+4. Network ACLs: Network access control lists (ACLs) are used to control traffic between subnets in the VPC. They operate at the subnet level and can be used to allow or deny traffic based on IP addresses, ports, and protocols.
+5. Internet Gateway: An internet gateway is used to allow resources within the VPC to communicate with the internet. It provides a route for traffic to flow between the VPC and the public internet.
+6. NAT Gateway: A network address translation (NAT) gateway is used to allow resources within a private subnet to access the internet. It provides a way to translate private IP addresses to public IP addresses and vice versa.
+7. VPC Endpoints: VPC endpoints allow resources within a VPC to access AWS services without the need for internet gateways or NAT gateways. They provide a secure and private connection to AWS services.
+These are some of the core components of a VPC, but there are also other features such as VPC peering, VPN connections, and Direct Connect that can be used to further enhance the functionality and security of your VPC.
+
+how many subnets can be created in vpc
+you can create up to 200 subnets per VPC, but this limit can be increased by submitting a support request to AWS.
+
+how many route tables can be created in vpc 
+ In general, the default limit for the number of route tables that can be created per VPC is 200, but this limit can be increased by submitting a support request to AWS.
+ 
+route table vs main route table
+
+The main difference between a route table and a main route table in a VPC is that the main route table is the default route table that is automatically created when you create a new VPC.
+custom route table : A route table that you create for your VPC.
+By default, the main route table has a higher priority than any additional route tables that you create in the VPC.
+The main route table cannot be deleted, but it can be modified like any other route table.
+The main route table is associated with the VPC's internet gateway, which allows resources within the VPC to communicate with the public internet. 
+Additional route tables must be explicitly configured with their own internet gateway if they need to access the internet.
+
+
+ DHCP (Dynamic Host Configuration Protocol) is a network protocol used to automatically assign IP addresses and other network configuration settings to devices on a network. In AWS, DHCP is used to assign IP addresses and other configuration settings to instances running in a VPC.
+ 
+ Different  security groups and nacl 
+ 
+ security groups :- it is the first layer of defense .it adds a security to ec2 intance that control both inbound and outbound traffic at the intance level
+ 
+ Nacl (Network access control list)
+ It is the secound layer of defense .It also add on additional layer of security associated with subnet that control both inbound and outbound traffic at the subnet level 
+ 
+ Peering connections
+Use a VPC peering connection to route traffic between the resources in two VPCs.
+VPC peering is a private connection between VPCs, and traffic between the two VPCs never leaves the AWS network. This makes VPC peering a secure way to connect VPCs without exposing traffic to the public internet.
+
+VPC peering between two VPCs, follow these steps:
+
+1. Create a VPC peering connection: To create a VPC peering connection, you need to have control over both VPCs and each VPC must have a unique CIDR block. You also need to know the VPC ID of each VPC. Go to the Amazon VPC console, choose the VPC peering connections option, and click on the "Create Peering Connection" button. Specify the VPC ID of the VPC you want to peer with, as well as the peering connection name.
+
+2.Accept the VPC peering connection: The owner of the other VPC will receive a request to accept the VPC peering connection. Once they accept the request, the VPC peering connection is established, and traffic can flow between the two VPCs.
+
+3.Configure route tables: By default, VPC peering connections do not have routes associated with them. You need to configure the route tables of each VPC to route traffic to the other VPC through the VPC peering connection. Go to the Amazon VPC console, choose the route tables option, and add a new route to the VPC peering connection.
+
+4.Allow traffic through network ACLs and security groups: If you have network ACLs or security groups configured on the VPCs, you need to allow traffic from the other VPC through them. For example, if you have a security group that only allows traffic from specific IP addresses, you need to add the IP addresses of the other VPC to the security group.
+ 
+ Transit Gateway:-
+ 
+ A Transit Gateway acts as a hub for connecting multiple VPCs and on-premises networks. Instead of creating separate peering connections between each VPC and on-premises network, you can create a single connection to the Transit Gateway. This can greatly simplify network architecture and reduce the number of connections you need to manage.
+ 
+ step of Transit Gateway
+
+1.Create a Transit Gateway: Go to the Amazon VPC console, choose the Transit Gateways option, and click on the "Create Transit Gateway" button. Specify a name for the Transit Gateway, as well as any optional settings.
+
+2.Attach VPCs: Once the Transit Gateway is created, you can attach VPCs to it. Go to the Transit Gateway attachments option, and click on the "Create Transit Gateway Attachment" button. Select the VPC you want to attach to the Transit Gateway, as well as the attachment type (either VPC or VPN).
+
+3.Configure routing: By default, Transit Gateways do not have routes associated with them. You need to configure the route tables of each VPC to route traffic to the Transit Gateway. Go to the Amazon VPC console, choose the route tables option, and add a new route to the Transit Gateway attachment.
+
+4.Create and attach VPN connections (if needed): If you need to connect on-premises networks to the Transit Gateway, you can create and attach VPN connections. Go to the Amazon VPC console, choose the VPN connections option, and click on the "Create VPN Connection" button. Specify the VPN connection details, and attach it to the Transit Gateway.
+
+5.Configure security groups and network ACLs (if needed): If you have security groups or network ACLs configured on the VPCs, you need to allow traffic from the other VPCs and on-premises networks through them. For example, if you have a security group that only allows traffic from specific IP addresses, you need to add the IP addresses of the other VPCs and on-premises networks to the security group.
+
+VPC peering and transit gateway are two options for connecting multiple VPCs within AWS, but they differ in their capabilities and use cases.
+
+VPC peering is a way to connect two VPCs together so that they can communicate with each other over a private network. VPC peering is ideal for scenarios where you need to connect VPCs within the same AWS region, as it provides low-latency, high-bandwidth connectivity. However, VPC peering is not transitive, meaning that if you want to connect more than two VPCs, you will need to create separate peering connections between each pair of VPCs. This can become complex and difficult to manage as the number of VPCs increases.
+
+Transit gateway, on the other hand, is a fully-managed service that allows you to connect multiple VPCs and on-premises networks together in a hub-and-spoke model. Transit gateway provides a central hub that simplifies network management by allowing you to centrally manage routing and security policies across all of your connected networks. Transit gateway is ideal for scenarios where you need to connect multiple VPCs across different AWS regions or with on-premises networks. Transit gateway is also transitive, meaning that traffic can be routed between multiple VPCs through the transit gateway.
 
  
-  
