@@ -643,11 +643,12 @@ storeage classes in efs
 ================================================================================================================================
 route 53
 
-Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service offered by Amazon Web Services (AWS). It is used to route internet traffic to resources such as websites, web applications, and other internet-based services.
+Amazon Route 53 is a highly available and scalable Domain Name System (DNS) It is used to route internet traffic to resources such as websites, web applications, and other internet-based services.
 
 Route 53 enables you to register domain names, such as example.com, and manage the DNS records associated with those domain names.
 It can route requests to resources within AWS, such as Amazon Elastic Compute Cloud (EC2) instances, Amazon Elastic Load Balancing (ELB) load balancers, Amazon Simple Storage Service (S3) buckets, and other AWS resources.
 It can also route requests to resources outside of AWS, such as endpoints hosted in your own data center or other third-party services.
+
 Route 53 provides a range of features, including traffic management, health checks, and DNS failover. These features help to ensure high availability, reliability, and scalability of your applications and services.
 
 Record types in route 53
