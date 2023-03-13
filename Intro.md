@@ -1,5 +1,6 @@
 Hi Atul,
-  my name is pawan, i completed my graduation from nagpur university in 2020
+  my name is pawan,
+  i completed my graduation from nagpur university in 2020
   i am working in xyz company from last 2.7 years as devops engineer
   in my 2.7 years of experiance i worked on several devops tools
   like 
@@ -20,8 +21,8 @@ Hi Atul,
   linux services like http,ssh,dns,dhcp,ftp,samba,mariadb.
   
   roles and responsibilites
-  worked with git vcs setting up new developement branches, merging branches
-  setting up the new repository and managing the permissions for versions git branches.
+  manage branching and merging strategies for Git repositories. 
+  use Git to automate the build, test, and deployment processes. 
   implemented ci/cd pipeline involving github and jenkins for complete automaton from commit to deploy.
   responsible for continues integration and continous delivary process implimented using jenkins
   used maven as build tool for building of deployable artifact from source code.
