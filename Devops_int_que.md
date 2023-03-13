@@ -59,3 +59,12 @@ database1 ansible_host=192.168.1.102 ansible_user=ubuntu
 
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
+
+
+What is ad-hoc command ?
+An Ansible ad-hoc command is a one-line command used to execute a single Ansible module on one or more target hosts. It's a quick and easy way to run ad-hoc commands or perform simple tasks without creating a playbook.
+
+Here's the basic syntax for an Ansible ad-hoc command:
+=Ansible <host-name> -a <argument>  <what you want to do.>
+ 
+
