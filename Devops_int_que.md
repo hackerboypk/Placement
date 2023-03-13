@@ -64,7 +64,40 @@ ansible_python_interpreter=/usr/bin/python3
 What is ad-hoc command ?
 An Ansible ad-hoc command is a one-line command used to execute a single Ansible module on one or more target hosts. It's a quick and easy way to run ad-hoc commands or perform simple tasks without creating a playbook.
 
+(ad-hoc command is linux command.it dont have idempontancy(over right) .it do not prefer but sometimes used for small task like start the machin or stop the machin or install any package 
+
 Here's the basic syntax for an Ansible ad-hoc command:
 =Ansible <host-name> -a <argument>  <what you want to do.>
  
 
+ 
+ Ansible playbook ?
+ An Ansible playbook is a set of instructions that are used to define and execute a series of tasks in a specific order on a set of remote hosts. Playbooks are written in YAML format, which is a human-readable data serialization format. Ansible uses these playbooks to manage and configure remote systems, automate deployment processes, and perform other system administration tasks.
+ 
+ (Ansible playbook means collaction or set of models and task in the playbook by using playbook we can parform service ,configure, any thing to the node servicer) 
+ ---
+- name: Install Apache
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Install Apache package
+      yum:
+        name: httpd
+        state: present
+ - name: Restart Apache
+      service:
+        name: httpd
+        state: restarted
+ 
+ what is model in ansible ?
+ Modules: Ansible uses modules to perform specific tasks on remote hosts, such as installing packages, copying files, managing users, and starting or stopping services. Modules are reusable and can be used in multiple playbooks. Ansible includes a wide range of built-in modules, and you can also create your own custom modules. (it have idempontancy(over right))
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
