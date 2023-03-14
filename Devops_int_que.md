@@ -3,6 +3,67 @@ Devops ?? pending
 
 
 Git
+=====================================================================================================================================================================
+
+What is Maven ?
+Maven is build Tool and a automation and project management tool devloped by apache software fondation based on POM (project object models)
+->Maven co=an build any of project into desired output such as .jar , .war or metadata
+->mostly used for java based projects
+
+
+features of Maven:
+
+Dependency Management: Maven simplifies dependency management by allowing you to declare the dependencies for your project in the POM file, and automatically downloading and installing those dependencies from remote repositories.
+
+Build Lifecycle: Maven defines a standard build lifecycle with well-defined phases for compiling code, running tests, packaging the application, and deploying the artifacts.
+
+Convention over Configuration: Maven uses a convention over configuration approach, which means that it follows a standard project structure and file naming conventions, making it easier to set up and configure a project.
+
+Central Repository: Maven has a central repository that contains a large number of open-source libraries, making it easy to find and use third-party libraries in your projects.
+
+Plugins: Maven provides a large number of plugins that can be used to extend its functionality. These plugins can be used for tasks such as generating documentation, creating reports, or integrating with other tools.
+
+Customization: Maven is highly customizable and can be configured to suit the needs of different projects. This includes defining custom build phases, creating custom plugins, and configuring the build process.
+
+Continuous Integration: Maven is often used in conjunction with continuous integration (CI) tools like Jenkins or Travis CI, allowing for automatic builds and testing of your codebase with each code commit
+
+
+Maven lifecycle 
+Build lifecycle consist of a sequnce of build phase and each build phase consist of a sequnce of gools. each goal is reponsible for a particuler task.
+1 genrated resource  (means download dependence from remote or local repo)
+2 comple code ( )
+3 unit test
+4 Package (build in jar or war )
+5 install (save into local repo & artifactory)
+6 Depoly (to server)
+7 clean (Delete run time files)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
