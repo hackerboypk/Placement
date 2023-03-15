@@ -314,33 +314,21 @@ You can use Amazon EC2 to launch as many or as few virtual servers as you need, 
 
 Features of Amazon EC2
 Amazon EC2 provides the following features:
-
 Virtual computing environments, known as instances
-
 Preconfigured templates for your instances, known as Amazon Machine Images (AMIs),
-
 Various configurations of CPU, memory, storage, and networking capacity for your instances, known as instance types
-
 Secure login information for your instances using key pairs (AWS stores the public key, and you store the private key in a secure place)
-
 Storage volumes for temporary data that's deleted when you stop, hibernate, or terminate your instance, known as instance store volumes
-
 Persistent storage volumes for your data using Amazon Elastic Block Store (Amazon EBS), known as Amazon EBS volumes
-
 Multiple physical locations for your resources, such as instances and Amazon EBS volumes, known as Regions and Availability Zones
-
 A firewall that enables you to specify the protocols, ports, and source IP ranges that can reach your instances using security groups
-
 Static IPv4 addresses for dynamic cloud computing, known as Elastic IP addresses
-
 Metadata, known as tags, that you can create and assign to your Amazon EC2 resources
-
 Virtual networks you can create that are logically isolated from the rest of the AWS Cloud, and that you can optionally connect to your own network, known as virtual private clouds (VPCs)
 
 Create Ec2 instance
 steps 
 ec2>instance>launch instance>instance name>ami>instance type>key pair>network setting>configure storage>advanced details>launch instance
-
 Instance state
 1.pending
 The instance is preparing to enter the running state. An instance enters the pending state when it launches for the first time, or when it is started after being in the stopped state.
@@ -411,7 +399,7 @@ Shared (default) — Multiple AWS accounts may share the same physical hardware.
 Dedicated Instance (dedicated) — Your instance runs on single-tenant hardware.
 Dedicated Host (host) — Your instance runs on a physical server with EC2 instance capacity fully dedicated to your use, an isolated server with configurations that you can control.
 
-Launch Templet.?
+Launch Templete ?
 A launch template is similar to a launch configuration, in that it specifies instance configuration information.
 It includes the ID of the Amazon Machine Image (AMI), the instance type, a key pair, security groups, and other parameters used to launch EC2 instances.
 
@@ -453,6 +441,7 @@ A cluster placement group is a logical grouping of instances within a single Ava
 
 network interface ?
 An elastic network interface is a logical networking component in a VPC that represents a virtual network card. It can include the following attributes: A primary private IPv4 address from the IPv4 address range of your VPC. One or more secondary private IPv4 addresses from the IPv4 address range of your VPC.
+
 
 do it again and solve the errors
 ==============================================================================================================================
