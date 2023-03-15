@@ -442,6 +442,19 @@ A cluster placement group is a logical grouping of instances within a single Ava
 network interface ?
 An elastic network interface is a logical networking component in a VPC that represents a virtual network card. It can include the following attributes: A primary private IPv4 address from the IPv4 address range of your VPC. One or more secondary private IPv4 addresses from the IPv4 address range of your VPC.
 
+Load Balancer:
+a load balancer is a service that distributes incoming traffic among multiple EC2 instances in order to improve availability, scalability, and fault tolerance.
+types of load balancers for EC2:
+    Application Load Balancer (ALB): This type of load balancer is ideal for routing traffic to multiple HTTP/HTTPS servers based on the content of the request. ALBs can route traffic based on URL path, host header, and query string parameters, among other factors.
+
+   Network Load Balancer (NLB): This type of load balancer is designed to handle high levels of traffic and is ideal for TCP and UDP traffic. NLBs can handle millions of requests per second and can route traffic based on IP protocol data.
+   
+   Gateway Load Balancer (GWLB) is a service that allows you to route traffic to a specific IP address or port within your VPC (Virtual Private Cloud). GWLB is designed to handle high volumes of external network traffic and provides a scalable, highly available solution for routing traffic to multiple resources such as EC2 instances, container-based applications, and NAT gateways.
+
+GWLB operates at the application layer (Layer 7) of (OSI) model and can route traffic based on a variety of factors such as HTTP headers, source IP addresses, and SSL/TLS certificates.
+
+Both types of load balancers can automatically scale up or down based on the incoming traffic, making them a powerful tool for ensuring high availability and scalability in your AWS EC2 infrastructure.
+
 
 do it again and solve the errors
 ==============================================================================================================================
