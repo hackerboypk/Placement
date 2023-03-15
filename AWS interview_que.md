@@ -445,9 +445,9 @@ An elastic network interface is a logical networking component in a VPC that rep
 Load Balancer:
 a load balancer is a service that distributes incoming traffic among multiple EC2 instances in order to improve availability, scalability, and fault tolerance.
 types of load balancers for EC2:
-    Application Load Balancer (ALB): This type of load balancer is ideal for routing traffic to multiple HTTP/HTTPS servers based on the content of the request. ALBs can route traffic based on URL path, host header, and query string parameters, among other factors.
+    Application Load Balancer (ALB): This type of load balancer is ideal for routing traffic to multiple HTTP/HTTPS servers based on the content of the request. ALBs can route traffic based on URL path, host header, and query string parameters, among other factors. operates at Layer 7.
 
-   Network Load Balancer (NLB): This type of load balancer is designed to handle high levels of traffic and is ideal for TCP and UDP traffic. NLBs can handle millions of requests per second and can route traffic based on IP protocol data.
+   Network Load Balancer (NLB): This type of load balancer is designed to handle high levels of traffic and is ideal for TCP and UDP traffic. NLBs can handle millions of requests per second and can route traffic based on IP protocol data. Network Load Balancer (NLB) operates at Layer 4.
    
    Gateway Load Balancer (GWLB) is a service that allows you to route traffic to a specific IP address or port within your VPC (Virtual Private Cloud). GWLB is designed to handle high volumes of external network traffic and provides a scalable, highly available solution for routing traffic to multiple resources such as EC2 instances, container-based applications, and NAT gateways.
 
