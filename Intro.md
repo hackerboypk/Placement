@@ -21,6 +21,7 @@ Hi Atul,
   ==================================================================
   roles and responsibilites
   manage branching and merging strategies for Git repositories. 
+  Git version control code, automate CI/CD, manage infrastructure as code, and collaborate with team members.
   use Git to automate the build, test, and deployment processes. 
   implemented ci/cd pipeline involving github and jenkins for complete automaton from commit to deploy.
   responsible for continues integration and continous delivary process implimented using jenkins.
