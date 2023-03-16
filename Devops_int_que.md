@@ -88,8 +88,8 @@ what is pluging  ?
 Plugins are software components in Jenkins that add new functionality or enhance existing features of the Jenkins automation server. They are written in Java and can be installed in Jenkins to extend its capabilities and integrate with external tools and technologies.
 (use plugings to extened functionality of jenkins.)
 
-
-
+Home dir of jenkins ?
+ /var/lib/jenkins
 
 
 
