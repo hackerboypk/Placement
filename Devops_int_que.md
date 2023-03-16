@@ -4,7 +4,109 @@ Devops ?? pending
 
 Git
 =====================================================================================================================================================================
+jenkins
 
+what is sofware ?
+collaction of program is called sofware
+
+types of sofware ?
+1) application software - Application software is a type of software that is designed to perform specific tasks or solve specific problems.
+2) system software -System software is a type of software that manages and controls the operation of a computer or electronic device. ex operating systems, device drivers, firmware, and utility programs. ex  software include word processors, spreadsheet programs, email clients, web browsers, media players, and graphic design software.
+
+what is sdlc (sofware developing life cycle )
+SDLC stands for Software Development Life Cycle, which is a methodology used to develop software systems. It is a process for planning, designing, developing, testing, implementing, and maintaining software applications.
+
+phase of the Software Development Life Cycle (SDLC):
+
+Planning Phase: In this phase, the project scope, objectives, and goals are defined, and the stakeholders and their requirements are identified. A project plan is created that includes timelines, budgets, resources, and deliverables.
+
+Analysis Phase: During this phase, the requirements of the system are gathered, documented, and analyzed. The functional and non-functional requirements of the software are identified, and the data inputs and outputs are defined. The process flow is defined, and use cases and user stories are developed. The outcome of this phase is a Requirements Specification document that outlines the requirements of the software.
+
+Design Phase: In this phase, the software architecture and design are developed based on the requirements identified in the analysis phase. The technical specifications are created, and the software components are defined. The user interface design is developed, and the software is prototyped. The outcome of this phase is a Design Specification document that outlines the software architecture and design.
+
+Development Phase: During this phase, the software is developed according to the design specifications. The coding of the software is done, unit testing is performed, and the software components are integrated. The outcome of this phase is the software code that meets the requirements of the software.
+
+Testing Phase: This phase involves testing the software to ensure that it meets the specified requirements and functions correctly. This includes functional testing, system testing, performance testing, and user acceptance testing. The outcome of this phase is a Test Plan document that outlines the test cases, results, and issues.
+
+Deployment Phase: In this phase, the software is deployed to the end-users. This includes installation, configuration, and migration of data from the existing systems to the new software. The outcome of this phase is a Deployment Plan document that outlines the installation, configuration, and migration of data.
+
+Maintenance Phase: This phase involves ongoing support and maintenance of the software to ensure that it continues to function correctly and meet the changing needs of the end-users. This includes fixing defects, making updates and enhancements, and providing technical support. The outcome of this phase is a Maintenance Plan document that outlines the ongoing support and maintenance of the software.
+
+what is Continuous Integration , Continuous Deployment , Continuous Delivery ?
+
+
+Continuous Integration (CI), Continuous Deployment (CD), and Continuous Delivery (CD) are all practices that are commonly used in software development. While these terms are often used interchangeably, they refer to different aspects of the software development process.
+
+Continuous Integration (CI) is a practice where developers integrate their code changes into a shared repository on a regular basis. Each time a change is made, a build is automatically triggered, and the code is tested to ensure that it integrates successfully with the rest of the codebase. The goal of CI is to catch integration problems early in the development process, reducing the time and effort required to fix them.
+
+Continuous Deployment (CD) is a practice where every code change that passes the automated tests is automatically deployed to production. The goal of CD is to reduce the time between the development of a feature and its deployment to production, resulting in faster feedback and shorter development cycles.
+
+Continuous Delivery (CD) is a practice where code changes are automatically built, tested, and prepared for release to production. While the release to production is not automatic, the process of preparing the release is automated, resulting in a faster and more reliable release process.
+
+Why only Jenkins?
+ It has so many plug-ins.
+ You can write your own plug-in
+ You can use community plug-ins
+ Jenkins is not just a tool. It is a framework. I.e. you can do what ever you 
+want. All you need is plug-ins.
+ We can attach slaves (nodes) to Jenkins master. It instructs others 
+(slaves) to do Job. If slaves are not available,
+ Jenkins itself does the job.
+ Jenkins also acts as crone server replacement. I.e. can do repeated tasks 
+automatically
+ Running some scripts regularly
+ E.g.: Automatic daily alarm.
+ Can create Labels (Group of slaves) (Can restrict where the project has to 
+run
+
+What is Jenkins Architecture?
+Jenkins architecture is Client-Server model. Where ever, we install Jenkins, we 
+call that server is Jenkins master. We can create slaves also in Jenkins, so that, 
+server load will be distributed to slaves. Jenkins master randomly assigns tasks 
+to slaves. But if you want to restrict any job to run in particular slave, then we 
+can do it so that, that particular job will be executed in that slave only. We can 
+group some slaves by using “Label”
+
+How many types of configurations in Jenkins?
+There are total 3 types of configurations in Jenkins.
+1. Global: – Here, whatever configuration changes we do, applicable to whole 
+Jenkins including jobs as well as nodes. This configuration has high priority.
+2. Job: – These configurations applicable to only Jobs. Jobs also we call as 
+projects or items in Jenkins.
+3. Node: – These configurations applicable to only nodes. Also we call Slaves. 
+These are kind of helpers to Jenkins master to distribute the excessive load.
+
+What do you mean by workspace in Jenkins?
+The workspace is the location on your computer where Jenkins places all files 
+related to the Jenkins project. By default each project or job is assigned a 
+workspace location and it contains Jenkins-specific project metadata, 
+temporary files like logs and any build artifacts, including transient build files. 
+Jenkins web page acts like a window through which we are actually doing work 
+in workspace.
+
+what is pluging  ?
+Plugins are software components in Jenkins that add new functionality or enhance existing features of the Jenkins automation server. They are written in Java and can be installed in Jenkins to extend its capabilities and integrate with external tools and technologies.
+(use plugings to extened functionality of jenkins.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================================================================================================================================
 What is Maven ?
 Maven is build Tool and a automation and project management tool devloped by apache software fondation based on POM (project object models)
 ->Maven co=an build any of project into desired output such as .jar , .war or metadata
