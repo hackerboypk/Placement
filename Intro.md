@@ -7,7 +7,7 @@ Hi Atul,
   github for source code management
   implemented ci/cd pipeline using jenkins
   used maven as build tool
-  used sonarqube for testing purpose
+  used sonarqube for code analysis
   for contenerization and orchestration i used docker and kubernates
   used ansible as configuration management tool
   and terraform for creating infrastruture
@@ -20,18 +20,30 @@ Hi Atul,
   linux services like http,ssh,dns,dhcp,ftp,samba,mariadb.
   ==================================================================
   roles and responsibilites
-  manage branching and merging strategies for Git repositories. 
-  Git version control code, automate CI/CD, manage infrastructure as code, and collaborate with team members.
-  use Git to automate the build, test, and deployment processes. 
+  using git as version control system.
+  managing git repositories using various commands like push pull merge clone branch rebase and etc.
+  use Git to automate the build, test, and deployment processes.
+  setting up jenkins server
+	master and slave configuration
   implemented ci/cd pipeline involving github and jenkins for complete automaton from commit to deploy.
   responsible for continues integration and continous delivary process implimented using jenkins.
   used maven as build tool for building of deployable artifact from source code.
-  used sonarqube for testing and quality check
+  used sonarqube for testing and code analysis check
   written ansible playbooks for configuration management
+  setting up the ansible control server
+	writing playbooks and roles
+	managing ansible hosts
   writing terraform scripts for launching ec2 instance, iam, and s3 buckets and vpc services
   worked on docker to create image from dockerfile
+  setting up docker environment
+	writing dockerfiles
+	creating custom images
   experienced creating container from docker image
   worked on docker volume, docker push, pull image through the repository.
+  setting up kubernates env on aws or on-premises
+	writing deployment files and service files
+	manging containers on pod
+	managing kubernates nodes
   ========================================================================
   used iam for creating roles,users,and groups and also implimented mfa to provide additonal security to aws account
   created s3 buckets in the aws to store files, sometimes which are required to serve static content for a web application.
