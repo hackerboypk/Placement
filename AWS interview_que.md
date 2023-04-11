@@ -65,9 +65,13 @@ Software-as-a-service (SaaS) is a method for delivering on-demand software appli
 IAM (Identity and Access Management)
 What is AWS IAM? 
 
-The Amazon Web Services Identity and Access Management service is like a security guard at the door to Amazon Web Services. 
-This is where Aws Services and its environment are authenticated and authorized. 
-The basic building blocks of AWS IAM are IAM roles, IAM users, groups and policies. 
+AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. With IAM, you can centrally manage permissions that control which AWS resources users can access. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
+
+users vs group ?
+A user is an AWS identity that represents an individual or application that interacts with AWS resources. Users have a unique name and credentials (such as a password or access keys) that are used to authenticate their access to AWS services. You can create, manage, and delete users in the AWS Management Console, AWS CLI, or AWS SDKs.
+A group is a collection of AWS users that have the same permissions to access AWS resources. By creating a group, you can assign permissions to the group, rather than to individual users. This makes it easier to manage access to resources, especially if you have many users who require the same set of permissions. You can add and remove users from a group, and assign policies to control the group's access to resources.
+
+
 
 Iam user:
 IAM users can be people or applications that interact with the AWS environment services and its resources.
@@ -104,7 +108,21 @@ instead of being uniquely associated with one person, a role is intended to be a
 Also, a role does not have standard long-term credentials such as a password or access keys associated with it.
 Instead, when you assume a role, it provides you with temporary security credentials for your role session.
 
-uses of roles?]
+There are several types of roles in AWS, each designed to serve a specific purpose. Here are some of the most commonly used types of roles in AWS:
+
+    AWS Service Roles: AWS Service Roles are roles that are used by AWS services to access other AWS services. These roles are typically used to enable cross-service access for automation, monitoring, and other tasks.
+
+    IAM Roles: IAM Roles are roles that are used to delegate permissions to IAM users, groups, or roles. IAM roles are often used to provide temporary access to AWS resources for specific tasks or functions.
+
+    Cross-Account Roles: Cross-Account Roles are roles that allow IAM users or AWS services in one AWS account to access resources in another AWS account. These roles are often used in scenarios where multiple AWS accounts are used for different purposes, such as development, testing, and production environments.
+
+    EC2 Instance Roles: EC2 Instance Roles are roles that are assigned to EC2 instances. These roles are used to provide temporary permissions to resources such as S3 buckets and DynamoDB tables.
+
+    Lambda Execution Roles: Lambda Execution Roles are roles that are assigned to AWS Lambda functions. These roles are used to provide permissions to resources such as S3 buckets, DynamoDB tables, and other AWS services.
+
+    Federated Roles: Federated Roles are roles that allow external identities to assume AWS roles. These roles are often used to enable Single Sign-On (SSO) for corporate users who authenticate with their corporate credentials.
+
+uses of roles?
 -roles are the secured way to grant permission to entity that we trust.                                             
 -it is an IAM identity which we can create in our account that have specific permission
 -an IAm role is similar to IAm user.
